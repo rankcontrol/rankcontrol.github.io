@@ -20,6 +20,28 @@ defaults:
       layout: post
       author: Ram
 header_pages:
+  - medium.md
   - about.md
 exclude:
   - README.md
+  - build_pages.py
+social:
+  name: Search Shift
+  links:
+    - https://medium.com/@thesearchshift
+    - https://thesearchshift.substack.com
+    - https://searchshift.hashnode.dev
+    - https://dev.to/thesearchshift
+    - https://hackernoon.com/u/searchshift
+    - https://searchshift.bearblog.dev
+    - https://sites.google.com/view/search-shift-notes
+    - https://typhoon-cheese-d66.notion.site/AI-Search-Data-Library-5326d7142291822583f50143e78b0c8b
+    - https://github.com/rankcontrol
+    - https://www.youtube.com/channel/UCABAzklFXscQt60GxRP46dw
+    - https://x.com/the_searchshift
+    - https://bsky.app/profile/searchshift.bsky.social
+    - https://www.threads.com/@thesearchshift
+    - https://www.instagram.com/thesearchshift
+    - https://www.pinterest.com/searchshift
+    - https://t.me/thesearchshift
+    - https://www.quora.com/profile/Ram-12260
