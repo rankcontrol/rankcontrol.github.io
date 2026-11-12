@@ -3,6 +3,8 @@ description: Dated tests and data on what Google and the AI answer engines (Chat
 url: https://rankcontrol.github.io
 baseurl: ""
 lang: en
+webmaster_verifications:
+  google: evnqTvUhBz6pDlgNIvjIaiZImClEUd3MZmZ5uy-cBRA
 author:
   name: Ram
 github_username: rankcontrol
