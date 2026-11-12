@@ -4,8 +4,9 @@ title: On Medium
 permalink: /medium/
 ---
 
-Every Search Shift story published on [Medium](https://medium.com/@thesearchshift), newest first (22 so far). Each one is a dated test, count or sourced roundup on what Google and the AI answer engines show and cite.
+Every Search Shift story published on [Medium](https://medium.com/@thesearchshift), newest first (23 so far). Each one is a dated test, count or sourced roundup on what Google and the AI answer engines show and cite.
 
+- 2026-11-12: [What Content Marketing Services Cost: 9 Providers, From $350 a Month](https://medium.com/@thesearchshift/what-content-marketing-services-cost-9-providers-from-350-a-month-b181fdd1ad5f)
 - 2026-11-12: [What Is Agentic Commerce? We Ran 16 Shopping Questions to Find Out](https://medium.com/@thesearchshift/what-is-agentic-commerce-we-ran-16-shopping-questions-to-find-out-c996bce45779)
 - 2026-11-11: [Google Handles About 13.7 Billion Searches a Day: 2026 Search Statistics, Sourced](https://medium.com/@thesearchshift/google-handles-about-13-7-billion-searches-a-day-2026-search-statistics-sourced-d3a5b37c774b)
 - 2026-11-11: [From Free to $4,500 a Month: The State of AEO Tools in 2026](https://medium.com/@thesearchshift/from-free-to-4-500-a-month-the-state-of-aeo-tools-in-2026-99fcf92e781d)
