@@ -25,6 +25,7 @@ header_pages:
 exclude:
   - README.md
   - build_pages.py
+  - INDEXNOW_KEY
 social:
   name: Search Shift
   links:
@@ -45,3 +46,5 @@ social:
     - https://www.pinterest.com/searchshift
     - https://t.me/thesearchshift
     - https://www.quora.com/profile/Ram-12260
+include:
+  - 02cd1e6b350dda73070de4c1f69a20b2.txt
