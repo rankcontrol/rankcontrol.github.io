@@ -38,6 +38,11 @@ PROFILES = [
 ]
 
 
+# Shown on the site (user, 2026-11-12: "limit to 5-8 per platform, it can look spammy"). The full PROFILES list
+# goes only into the JSON-LD sameAs, which readers don't see.
+VISIBLE = ["Medium", "Substack", "Hashnode", "dev.to", "HackerNoon", "Bear Blog", "Search Shift Notes (Google Sites)", "YouTube"]
+
+
 def medium_page():
     order = json.load(open(os.path.join(ROOT, "schedule", "order.json"), encoding="utf-8"))
     urls = {r["order"]: r["medium_url"] for r in csv.DictReader(open(os.path.join(ROOT, "distribution-tracker.csv"), encoding="utf-8")) if r.get("medium_url")}
@@ -56,7 +61,8 @@ def profiles():
     os.makedirs(os.path.join(HERE, "_data"), exist_ok=True)
     with open(os.path.join(HERE, "_data", "profiles.yml"), "w", encoding="utf-8") as f:
         for name, url in PROFILES:
-            f.write(f'- name: "{name}"\n  url: "{url}"\n')
+            if name in VISIBLE:
+                f.write(f'- name: "{name}"\n  url: "{url}"\n')
     cfg_p = os.path.join(HERE, "_config.yml")
     cfg = open(cfg_p, encoding="utf-8").read()
     block = "social:\n  name: Search Shift\n  links:\n" + "".join(f"    - {u}\n" for _, u in PROFILES)
@@ -67,4 +73,4 @@ def profiles():
 if __name__ == "__main__":
     n = medium_page()
     profiles()
-    print(f"medium.md: {n} stories; _data/profiles.yml and _config.yml social.links: {len(PROFILES)} profiles")
+    print(f"medium.md: {n} stories; _data/profiles.yml: {len(VISIBLE)} shown; _config.yml sameAs: {len(PROFILES)}")

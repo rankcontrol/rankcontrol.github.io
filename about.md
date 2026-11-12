@@ -12,7 +12,7 @@ Corrections are welcome as an issue on [this site's repository](https://github.c
 
 ## Elsewhere
 
-Search Shift posts and notes on other sites (each topic is published once, on one of them):
+Where Search Shift publishes (each topic is published once, on one of these):
 
 <ul>
 {% for p in site.data.profiles %}<li><a rel="me" href="{{ p.url }}">{{ p.name }}</a></li>
