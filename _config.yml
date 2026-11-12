@@ -1,0 +1,25 @@
+title: AI Search Research
+description: Dated tests and data on what Google and the AI answer engines (ChatGPT, Perplexity, Gemini, Claude) show and cite. By Ram at RankControl.
+url: https://rankcontrol.github.io
+baseurl: ""
+lang: en
+author:
+  name: Ram
+github_username: rankcontrol
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+permalink: /:year/:month/:title/
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Ram
+header_pages:
+  - about.md
+exclude:
+  - README.md

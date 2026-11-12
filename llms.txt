@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: /llms.txt
+---
+# {{ site.title }}
+
+> {{ site.description }}
+
+Every post states the test date, the number of questions and runs, and links its raw data.
+
+## Posts
+{% for post in site.posts %}- [{{ post.title }}]({{ site.url }}{{ post.url }}): {{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 160 }}
+{% endfor %}
+## About
+- [About]({{ site.url }}/about/)
+- [Raw data](https://github.com/rankcontrol/ai-search-datasets)
