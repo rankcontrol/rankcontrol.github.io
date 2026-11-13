@@ -52,10 +52,11 @@ def medium_page():
     lines = ["---", "layout: page", "title: On Medium", "permalink: /medium/", "---", "",
              f"Every Search Shift story published on [Medium](https://medium.com/@thesearchshift), newest first ({len(rows)} so far). "
              "Each one is a dated test, count or sourced roundup on what Google and the AI answer engines show and cite. "
-             "Where a story has companion notes (a Google Doc or a Search Shift Notes page), they are linked after it.", ""]
+             "Where a story has companion notes (a Google Doc, a Search Shift Notes page, a GitHub Gist or a Leaflet post), they are linked after it.", ""]
     for r in rows:
         t = tracker.get(str(r["order"]), {})
-        notes = [f"[{name}]({u.split()[0]})" for name, u in (("Google Doc", t.get("google_docs", "")), ("Notes page", t.get("google_sites", "")))
+        notes = [f"[{name}]({u.split()[0]})" for name, u in (("Google Doc", t.get("google_docs", "")), ("Notes page", t.get("google_sites", "")),
+                                                              ("Gist", t.get("github_gist", "")), ("Leaflet", t.get("leaflet", "")))
                  if u.strip().startswith("http")]
         lines.append(f"- {r.get('published', '')}: [{r['title']}]({urls[str(r['order'])]})" + (" · " + " · ".join(notes) if notes else ""))
     open(os.path.join(HERE, "medium.md"), "w", encoding="utf-8").write("\n".join(lines) + "\n")
