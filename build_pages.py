@@ -45,14 +45,19 @@ VISIBLE = ["Medium", "Substack", "Hashnode", "dev.to", "HackerNoon", "Bear Blog"
 
 def medium_page():
     order = json.load(open(os.path.join(ROOT, "schedule", "order.json"), encoding="utf-8"))
-    urls = {r["order"]: r["medium_url"] for r in csv.DictReader(open(os.path.join(ROOT, "distribution-tracker.csv"), encoding="utf-8")) if r.get("medium_url")}
+    tracker = {r["order"]: r for r in csv.DictReader(open(os.path.join(ROOT, "distribution-tracker.csv"), encoding="utf-8"))}
+    urls = {k: r["medium_url"] for k, r in tracker.items() if r.get("medium_url")}
     rows = [r for r in order if r.get("status") == "Published" and urls.get(str(r["order"]))]
     rows.sort(key=lambda r: (r.get("published") or "", r["order"]), reverse=True)
     lines = ["---", "layout: page", "title: On Medium", "permalink: /medium/", "---", "",
              f"Every Search Shift story published on [Medium](https://medium.com/@thesearchshift), newest first ({len(rows)} so far). "
-             "Each one is a dated test, count or sourced roundup on what Google and the AI answer engines show and cite.", ""]
+             "Each one is a dated test, count or sourced roundup on what Google and the AI answer engines show and cite. "
+             "Where a story has companion notes (a Google Doc or a Search Shift Notes page), they are linked after it.", ""]
     for r in rows:
-        lines.append(f"- {r.get('published', '')}: [{r['title']}]({urls[str(r['order'])]})")
+        t = tracker.get(str(r["order"]), {})
+        notes = [f"[{name}]({u.split()[0]})" for name, u in (("Google Doc", t.get("google_docs", "")), ("Notes page", t.get("google_sites", "")))
+                 if u.strip().startswith("http")]
+        lines.append(f"- {r.get('published', '')}: [{r['title']}]({urls[str(r['order'])]})" + (" · " + " · ".join(notes) if notes else ""))
     open(os.path.join(HERE, "medium.md"), "w", encoding="utf-8").write("\n".join(lines) + "\n")
     return len(rows)
 
