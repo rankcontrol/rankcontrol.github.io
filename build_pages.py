@@ -35,6 +35,7 @@ PROFILES = [
     ("Pinterest", "https://www.pinterest.com/searchshift"),
     ("Telegram", "https://t.me/thesearchshift"),
     ("Quora", "https://www.quora.com/profile/Ram-12260"),
+    ("Nostr", "https://njump.me/npub1mhrv0r85fs3jr07u86akxrgwd3mywr5l05chmvr30sc92ylgfc3qdpkl5s"),
 ]
 
 
@@ -52,11 +53,11 @@ def medium_page():
     lines = ["---", "layout: page", "title: On Medium", "permalink: /medium/", "---", "",
              f"Every Search Shift story published on [Medium](https://medium.com/@thesearchshift), newest first ({len(rows)} so far). "
              "Each one is a dated test, count or sourced roundup on what Google and the AI answer engines show and cite. "
-             "Where a story has companion notes (a Google Doc, a Search Shift Notes page, a GitHub Gist or a Leaflet post), they are linked after it.", ""]
+             "Where a story has companion notes (a Google Doc, a Search Shift Notes page, a GitHub Gist, a Leaflet post or a Nostr article), they are linked after it.", ""]
     for r in rows:
         t = tracker.get(str(r["order"]), {})
         notes = [f"[{name}]({u.split()[0]})" for name, u in (("Google Doc", t.get("google_docs", "")), ("Notes page", t.get("google_sites", "")),
-                                                              ("Gist", t.get("github_gist", "")), ("Leaflet", t.get("leaflet", "")))
+                                                              ("Gist", t.get("github_gist", "")), ("Leaflet", t.get("leaflet", "")), ("Nostr", t.get("nostr", "")))
                  if u.strip().startswith("http")]
         lines.append(f"- {r.get('published', '')}: [{r['title']}]({urls[str(r['order'])]})" + (" · " + " · ".join(notes) if notes else ""))
     open(os.path.join(HERE, "medium.md"), "w", encoding="utf-8").write("\n".join(lines) + "\n")
