@@ -1,7 +1,7 @@
 ---
 title: "How to Choose Content Pillars That Work in Google and AI Answers"
 description: "RankControl scored 5 content pillars on 25 questions on October 19, 2026. I reran the test twice on November 19: HR compliance got sources 5 of 5 times."
-date: 2026-11-19 16:08:00 +0700
+date: 2026-11-19 16:04:00 +0700
 tags: [content pillars, content strategy, ai search, chatgpt, google rankings]
 image: /assets/img/gh-063-content-pillars-hero.jpg
 ---
