@@ -6,7 +6,7 @@ tags: [ai visibility, ai citations, per engine citation data, ai search statisti
 image: /assets/img/gh-037-ai-visibility-per-engine-citation-data-hero.jpg
 ---
 
-![Five slim blank panels in plum, burnt orange, ivory, rose and sage fanned out like a hand of cards inside a thin white circle, floating in a painted Baroque sky under the title AI Visibility By Engine](/assets/img/gh-037-ai-visibility-per-engine-citation-data-hero.jpg)
+![A large round faceted crystal lens in an ornate gold ring on a pedestal, sending several separate beams of golden light to the right, in a painted Baroque sky under the title AI Visibility By Engine](/assets/img/gh-037-ai-visibility-per-engine-citation-data-hero.jpg)
 
 On 15th of September, and on 24th of September 2026, two different people posted variants of the same concern in r/SEO_LLM. 
 One was trying multiple different AI visibility tools which had completely mismatched numbers. One tool had the brand appearing quite good. Another tool had the brand appearing to be almost non-existent. 
